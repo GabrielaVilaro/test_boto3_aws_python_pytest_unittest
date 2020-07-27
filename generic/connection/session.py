@@ -8,3 +8,7 @@ class Session:
         self.client = self.session.client('dynamodb')
         self.table = self.resource.Table('testUsers')
         self.key = {'UserId': '014'}
+
+        self.TableName = 'testUsers',
+        self.KeyConditionExpression = 'UserId = :UserId',
+        self.ExpressionAttributeValues = {':UserId': {'S': '014'}}
